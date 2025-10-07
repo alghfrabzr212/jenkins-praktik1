@@ -1,6 +1,9 @@
 pipeline {
-    agent any
-
+    agent {
+        docker {
+            image 'python:3.19'
+        }
+    }
     stages {
         stage('Install Dependencies') {
             steps {
